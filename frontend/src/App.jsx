@@ -1,5 +1,6 @@
 // src/App.jsx
 import React from "react";
+import Reducer from "./hooks/Reducer";
 import User from "./components/User";
 import Parent from "./components/Parent";
 import State from "./hooks/State";
@@ -18,6 +19,7 @@ const App = () => {
   return (
     <>
       <Navbar />
+      <Reducer/>
 
       <Routes>
         <Route path="/" element={<Home />} />
@@ -26,6 +28,18 @@ const App = () => {
         <Route path="/contact" element={<Contact />} />
         <Route path="/services/:id" element={<ProductDetails />} />
       </Routes>
+      <h2>Other Components</h2>
+
+      <Conditional />
+
+      <Form />
+      <State />
+      <Parent />
+      <User
+        name="xyz"
+        age={33}
+        skills={["HTML", "CSS", "JS", "JAVA"]}
+      />
     </>
      
   );
